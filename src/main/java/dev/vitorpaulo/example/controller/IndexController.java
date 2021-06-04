@@ -2,7 +2,6 @@ package dev.vitorpaulo.example.controller;
 
 import dev.vitorpaulo.example.renderer.TemplateRenderer;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 

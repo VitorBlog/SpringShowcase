@@ -2,7 +2,6 @@ package dev.vitorpaulo.example.model;
 
 import com.fasterxml.jackson.databind.json.JsonMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,7 +13,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
-
 import java.time.Instant;
 
 @Data
@@ -24,7 +22,8 @@ import java.time.Instant;
 @Entity
 public class User {
 
-    @Id @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
     @NotBlank(message = "Invalid name")
@@ -36,7 +35,8 @@ public class User {
     @NotBlank(message = "Invalid password")
     private String password;
 
-    @Email @NotBlank(message = "Invalid email")
+    @Email
+    @NotBlank(message = "Invalid email")
     private String email;
 
     private Instant created;

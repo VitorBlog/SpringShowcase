@@ -1,12 +1,7 @@
 package dev.vitorpaulo.example.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.json.JsonMapper;
-import com.fasterxml.jackson.databind.node.ArrayNode;
-import com.fasterxml.jackson.databind.node.ObjectNode;
 import dev.vitorpaulo.example.model.User;
-import dev.vitorpaulo.example.process.PostProcess;
 import dev.vitorpaulo.example.process.UserProcess;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;

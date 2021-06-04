@@ -16,14 +16,24 @@ public class PostProcess {
 
     private final PostRepository postRepository;
 
-    public Optional<Post> loadById(Long id) { return postRepository.findById(id); }
+    public Optional<Post> loadById(Long id) {
+        return postRepository.findById(id);
+    }
 
-    public Optional<Post> loadByUrl(String url) { return postRepository.findByUrl(url); }
+    public Optional<Post> loadByUrl(String url) {
+        return postRepository.findByUrl(url);
+    }
 
-    public List<Post> loadByAuthor(User author) { return postRepository.findByAuthor(author); }
+    public List<Post> loadByAuthor(User author) {
+        return postRepository.findByAuthor(author);
+    }
 
-    public List<Post> loadAll() { return postRepository.findAll(Sort.by(Sort.Direction.ASC, "created")); }
+    public List<Post> loadAll() {
+        return postRepository.findAll(Sort.by(Sort.Direction.ASC, "created"));
+    }
 
-    public Post save(Post post) { return postRepository.save(post); }
+    public Post save(Post post) {
+        return postRepository.save(post);
+    }
 
 }

@@ -10,18 +10,15 @@ import org.springframework.stereotype.Service;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.UncheckedIOException;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- *
  * SpringBoot integration with JTE.
  *
  * @author casid
  * @author benjamin-thomas
- *
  */
 @Service
 public class TemplateRenderer {
@@ -41,7 +38,10 @@ public class TemplateRenderer {
 
     public void render(String name, Object model, HttpServletResponse response) {
 
-        render(name, new HashMap<>() {{ put("model", model); } }, response);
+        render(name, new HashMap<>() {
+            {
+                put("model", model);
+            } }, response);
 
     }
 

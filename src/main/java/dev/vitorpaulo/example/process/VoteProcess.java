@@ -16,14 +16,24 @@ public class VoteProcess {
 
     private final VoteRepository voteRepository;
 
-    public List<Vote> loadByPost(Post post) { return voteRepository.findByPost(post); }
+    public List<Vote> loadByPost(Post post) {
+        return voteRepository.findByPost(post);
+    }
 
-    public Optional<Vote> loadByPostAndAuthor(Post post, User author) { return voteRepository.findByPostAndAuthor(post, author); }
+    public Optional<Vote> loadByPostAndAuthor(Post post, User author) {
+        return voteRepository.findByPostAndAuthor(post, author);
+    }
 
-    public Vote save(Vote vote) { return voteRepository.save(vote); }
+    public Vote save(Vote vote) {
+        return voteRepository.save(vote);
+    }
 
-    public void delete(Vote vote) { voteRepository.delete(vote);  }
+    public void delete(Vote vote) {
+        voteRepository.delete(vote);
+    }
 
-    public void deleteByPostAndAuthor(Post post, User author) { voteRepository.deleteByPostAndAuthor(post, author); }
+    public void deleteByPostAndAuthor(Post post, User author) {
+        voteRepository.deleteByPostAndAuthor(post, author);
+    }
 
 }

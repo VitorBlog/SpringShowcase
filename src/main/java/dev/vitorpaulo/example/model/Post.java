@@ -1,19 +1,14 @@
 package dev.vitorpaulo.example.model;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.json.JsonMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.sun.istack.Nullable;
-import dev.vitorpaulo.example.process.VoteProcess;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.*;
-import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import java.time.Instant;
 
@@ -24,10 +19,12 @@ import java.time.Instant;
 @Entity
 public class Post {
 
-    @Id @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
-    @Lob @NotBlank(message = "Invalid title")
+    @Lob
+    @NotBlank(message = "Invalid title")
     private String description;
 
     @Nullable
