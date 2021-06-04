@@ -16,3 +16,5 @@ A simple spring showcase based on Twitter.
 - [ ] Retweet
 - [ ] Polls
 - [ ] Emotes
+
+[Demo at Youtube](https://youtu.be/W6YSRGQwI_U)
